@@ -25,7 +25,7 @@ prev(it, 3);
 ```C++ 
 vector<int> vec;
 ```
-- Inserting element at the vector   
+- Inserting element at the vector
 ```C++ 
 vec.push_back(5);
 ```
@@ -35,14 +35,14 @@ vec.pop_back();
 ```
 - Printing
 ```C++ 
-for(int i = 0; i < vec.size(); i++){  
+for(int i = 0; i < vec.size(); i++){
 	cout << vec[i] << endl; 
-	///Printing the i'th element in the vector (i is 0 based)  
-}  
+	///Printing the i'th element in the vector (i is 0 based)
+}
 ```
 - Printing the current size of the vector 
 ```C++ 
-cout << vec.size()  
+cout << vec.size()
 ```
 - Copying
 ```C++ 
@@ -134,7 +134,7 @@ int pos = lower_bound(arr, arr+n, value_to_find) - arr;
 int pos = upper_bound(v.begin(),v.end(),value_to_find)-v.begin(); 
 cout<<(v[pos] == value_to_find ? "Found" : "Not Found")<<endl;
 ```
-- Remove Duplicate :  
+- Remove Duplicate :
 	- **Prerequisite: Sorted array**
 ```C++ 
 v.erase( unique(v.begin(), v.end()), v.end() );
@@ -202,7 +202,7 @@ bool compare( data a, data b) {
 }
 
 int main()
-{   
+{
     vector<data> v;
     sort(v.begin(),v.end(), compare);
     return 0;
@@ -254,12 +254,12 @@ cout<<num + 1<<endl;
  ```
 + If numbers are separated by comma(,) full stop(.) etc then just add conditions accordingly.
 ```C++
-string str = "1,2,3,4,5";  
-while( iss >> num ) {  
-	if( iss.peek() == ',' || iss.peek() == '.' ) {  
+string str = "1,2,3,4,5";
+while( iss >> num ) {
+	if( iss.peek() == ',' || iss.peek() == '.' ) {
 		iss.ignore(); // add conditions  
-	}  
-	cout << num << endl;  
+	}
+	cout << num << endl;
 }
 ```
  + Find 
@@ -268,6 +268,13 @@ while( iss >> num ) {
  int pos = str.find("Hello", 0);
  cout<<(pos == -1 ? "Not found" : "Found")<<endl;
  ```
+ + Uppercase - Lowercase Conversion
+```C++
+string s = "I Love CPPS";
+transform(s.begin(), s.end(), s.begin(), ::toupper);
+transform(s.begin(), s.end(), s.begin(), ::tolower);
+```
+
  ## List
  > Lists are sequence containers that allow non-contiguous memory allocation. As compared to vector, list has slow traversal, but once a position has been found, insertion and deletion are quick.
 ```C++
